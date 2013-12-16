@@ -1,7 +1,17 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+Postit.destroy_all
+
+p1 = Postit.create(title: "My first postit.")
+p2 = Postit.create(title: "My second postit.")
+p3 = Postit.create(title: "My third postit.")
+
+p1.upvotes << Upvote.new
+p1.upvotes << Upvote.new
+p1.upvotes << Upvote.new
+
+p2.upvotes << Upvote.new
+p2.upvotes << Upvote.new
+
+p3.upvotes << Upvote.new
+p3.upvotes << Upvote.new
+p3.upvotes << Upvote.new
+p3.upvotes << Upvote.new

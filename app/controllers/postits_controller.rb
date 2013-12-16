@@ -2,14 +2,12 @@ class PostitsController < ApplicationController
 
   def index
     @postits = Postit.all.entries
-
-    render json: @postits
   end
 
   def show
-    @postit = Postit.find_by(id: params[:id])
+    @postits = [ Postit.find_by(id: params[:id]) ]
 
-    render json: [@postit]
+    render :index
   end
 
   def create

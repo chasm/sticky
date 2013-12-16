@@ -3,14 +3,12 @@ class UpvotesController < ApplicationController
 
   def index
     @upvotes = @postit.upvotes
-
-    render json: @upvotes
   end
 
   def show
-    @upvote = @postit.upvotes.find_by(id: params[:id])
+    @upvotes = [ @postit.upvotes.find_by(id: params[:id]) ]
 
-    render json: [ @upvote ]
+    render :index
   end
 
   def create
