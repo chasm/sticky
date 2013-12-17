@@ -3,7 +3,7 @@ object false
 child @postits do
   attributes :id, :title, :created_at
 
-  node :upvote_count do |postit|
+  node :upvotes do |postit|
     postit.upvotes.count
   end
 
