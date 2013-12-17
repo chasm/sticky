@@ -6,6 +6,8 @@ class Upvote
 
   embedded_in :postit
 
+  field :id
+
   private
 
   def set_id
